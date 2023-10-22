@@ -1,0 +1,4 @@
+FROM docker.io/library/mariadb:latest
+ENV MARIADB_ROOT_PASSWORD myapp
+ENV MARIADB_DATABASE myapp
+COPY sql/my.sql /docker-entrypoint-initdb.d
